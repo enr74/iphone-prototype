@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>jQuery iPhone UI</title>
+    <meta name="keywords" content="ajax, jquery, javascript, css, iphone, iphone interface, iphone ui" />
+    <meta name="description" content="jQuery iPhone interface for web applications" />
+	
+    <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
+	<link rel="stylesheet" href="css/iphone-480.css" type='text/css' media='only screen and (max-device-width: 480px)' />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.iphone.js"></script>
+	
+    <script type="text/javascript" src="js/other/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/other/jquery.disable.text.select.js"></script>
+    <script type="text/javascript" src="js/other/jquery.backgroundPosition.js"></script>	
+    <script type="text/javascript" src="js/other/jquery.dPassword.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iMenu.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iMenuManager.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iTabs.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iInput.js"></script>
+	<script type="text/javascript" src="js/ui/ui.iPassword.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iCheckBox.js"></script>
+	<script type="text/javascript" src="js/ui/ui.iRadioButton.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iSelect.js"></script>
+	
+    <script type="text/javascript" src="js/ui/ui.iGallery.js"></script>
+    <script type="text/javascript" src="js/ui/ui.iScroll.js"></script>
+	
+    <script type="text/javascript">
+    $(document).ready(function(){
+		$('.display').iMenuManager({
+			link   : 'a[href!=#]:not(.external):not(.bigbutton)', // selector for bind goTo event
+			content: '.display',    // what content load from target URL - default is body
+			title  : '.titlebar',  // where widget can found title - default is title
+			back   : '.titlebar'
+			});	
+    });
+    </script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7269638-10']);
+  _gaq.push(['_setDomainName', '.hohli.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+    <div class="iphone vertical">
+        <div class="phone">
+    	<div class="display">
+            <div class="screen">
+                <div class="titlebar">
+                    iPhone UI
+                </div>
+                <div class="scroll iscroll">
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="docs/index.html" title="Documentation" class="arrow external">
+	                            Documentation
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li><a href="docs/scroll.html" title="Scroll" class="arrow">Scroll</a></li>
+	                    <li><a href="docs/tabs.html" title="Tabs" class="arrow">Tabs</a></li>
+	                    <li><a href="docs/gallery.html" title="Gallery" class="arrow">Gallery</a></li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="docs/elements.html" title="Form Elements" class="arrow">
+	                            Form Elements
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="docs/icons.html" title="100 icons" class="arrow">
+	                            100 icons
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="app/index.html" title="Applications" class="arrow">
+	                            Applications
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/downloads/list" title="Download" class="arrow icon iicon external">
+	                            <em class="ii-inbox"></em>
+	                            Download in archive
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/issues/list" title="Source code" class="arrow icon iicon external">
+	                            <em class="ii-paperclip"></em>
+	                            Bug reports
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://code.google.com/p/jquery-iphone-ui/source/checkout" title="Source code" class="arrow icon iicon external">
+	                            <em class="ii-gear"></em>
+	                            Source code
+	                        </a>
+	                    </li>
+	                </ul>
+	                <ul class="imenu">
+	                    <li>
+	                       <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mxleod@yahoo.com&lc=US&item_name=jQuery%20Plugin&currency_code=USD" class="arrow icon iicon external" title="PayPal - The safer, easier way to pay online!">
+	                           <em class="ii-gift"></em>
+	                           Donate
+                           </a>
+	                    
+	                    </li>
+	                    <li>
+	                        <a href="http://anton.shevchuk.name" title="Anton Shevchuk" class="arrow icon iicon external">
+	                            <em class="ii-house"></em>
+	                            Author Homepage
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://twitter.com/AntonShevchuk" title="Anton Shevchuk on Twitter" class="arrow icon iicon external">
+	                            <em class="ii-bird"></em>
+	                            Author Twitter
+	                        </a>
+	                    </li>
+	                </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <a href="http://iphone.hohli.com" class="bigbutton">Exit</a>
+    </div>
+</body>
+</html>
+
