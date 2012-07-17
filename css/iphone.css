@@ -1,8 +1,8 @@
 /*Basic*/
 .iphone {
 	font: 75%/160% Helvetica, sans-serif;
-	color: black;
-	/*position:relative;*/
+	color: #000;
+	position:relative;
 }
     .iphone.vertical {
         width:320px;
@@ -337,7 +337,7 @@
 	    background:url('app/64x64/glossy.png') 8px 8px no-repeat;
 	}
 
-.iphone .app.upackinglist { background:url('app/64x64/upackinglist.png') 8px 8px no-repeat }
+.iphone .app.upackinglist { background:url('app/64x64/30secs64.png') 8px 8px no-repeat }
 /*/Applications*/
 /*Buttons*/
 .iphone .bigbutton {

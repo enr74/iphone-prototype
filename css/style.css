@@ -2,7 +2,7 @@ body {
 	margin: 30px auto;
 	padding: 0;
 	width: 800px;
-	color: black;
+	color: #000000;
 }
 
 @media only screen and (max-device-width: 480px) {
