@@ -145,7 +145,7 @@
             </div>
         </div>
         </div>
-        <a href="applications.jsp" class="bigbutton">Exit</a>
+        <a href="index.jsp" class="bigbutton">Exit</a>
     </div>
 </body>
 </html>

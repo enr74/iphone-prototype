@@ -1,12 +1,8 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
 <%@page import="java.util.Map"%>
 <%@page import="java.util.Iterator"%>
 <%@ include file="header.jsp" %>
 <body>
-
-   	<div align="center">	
-		<a href='#' onclick='slider3.prev();return false;'><img src="images/down.png"/></a> 
-		<a href='#' onclick='slider3.next();return false;'><img src="images/up.png"/></a>
-	</div>	
 
     <div class="iphone horizontal">
         <div class="phone">
@@ -49,21 +45,18 @@
                     %>
 					</ul>
 				</div>
+                <a href="#" onclick="slider3.prev();return false;" class="top leftbutton">L</a> 
+                <a href="#" onclick="slider3.next();return false;" class="top rightbutton">R</a>
+                <a href="#" onclick="slider4.prev();return false;" class="bottom leftbutton">L</a> 
+                <a href="#" onclick="slider4.next();return false;" class="bottom rightbutton">R</a>
             </div>
         </div>
         </div>
-        <a href="applications.jsp" class="bigbutton">Exit</a>
+        <a href="index.jsp" class="bigbutton">Exit</a>
     </div>
-
-	<div align="center">	
-		<a href='#' onclick='slider4.prev();return false;'><img src="images/down.png"/></a> 
-		<a href='#' onclick='slider4.next();return false;'><img src="images/up.png"/></a>
-	</div>	
-
-
-    <script src='swipe.js'></script>
-	<script>
-		var slider3 = new Swipe(document.getElementById('slider3'));
-		var slider4 = new Swipe(document.getElementById('slider4'));
-	</script>
-
+    <script>
+        var slider3 = new Swipe(document.getElementById('slider3'));
+        var slider4 = new Swipe(document.getElementById('slider4'));
+    </script>
+</body>
+</html>

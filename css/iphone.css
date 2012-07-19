@@ -107,6 +107,18 @@
 
 /*/TopBar*/
 /*TitleBar*/
+
+.rating {
+	color: #FFFFFF;
+    display: block;
+    font-size: 1.3em;
+    font-weight: 900;
+    left: 270px;
+    position: relative;
+    top: -35px;
+}
+
+
 .iphone .titlebar{
     position:relative;
     display:block;
@@ -207,8 +219,13 @@
 .iicon {
     position:relative;
 }
+
+.icons {
+	vertical-align: middle;
+}
+
 .iicon em{
-    position:absolute;
+    position:relative;
     display: block;
     width:48px;
     height:48px;
@@ -237,7 +254,7 @@
 .iicon .ii-gear      {background-position:50% -864px}
 .iicon .ii-gear2     {background-position:50% -912px}
 .iicon .ii-skull     {background-position:50% -960px}
-.iicon .ii-skull2    {background-position:50% -1008px}
+.iicon .ii-skull2    {background-position:50% -1008px; background-color: #000}
 .iicon .ii-bird      {background-position:50% -1056px}
 .iicon .ii-gift      {background-position:50% -1104px}
 .iicon .ii-weather   {background-position:50% -1152px}
@@ -300,7 +317,7 @@
 .iicon .ii-dogpow    {background-position:50% -3888px}
 .iicon .ii-calendar  {background-position:50% -3936px}
 .iicon .ii-lightbulb {background-position:50% -3984px}
-.iicon .ii-trophy    {background-position:50% -4032px}
+.iicon .ii-trophy    {background-position:50% -4032px; background-color: #000}
 .iicon .ii-camera    {background-position:50% -4080px}
 .iicon .ii-wineglass {background-position:50% -4128px}
 .iicon .ii-beerglass {background-position:50% -4176px}
@@ -346,6 +363,39 @@
     width:64px;
     height:64px;
     text-indent:-99999px;
+}
+
+
+.iphone .top {
+    top:42px;
+}
+
+.iphone .bottom {
+    bottom:42px;
+}
+
+.iphone .middle {
+    bottom:130px;
+}
+
+.iphone .rightbutton {
+    right:25px;
+    position:absolute;
+    display:block;
+    width:64px;
+    height:64px;
+    text-indent:-99999px;
+    background-image: url("images/right_arrow.png");
+}
+
+.iphone .leftbutton {
+    left:25px;
+    position:absolute;
+    display:block;
+    width:64px;
+    height:64px;
+    text-indent:-99999px;
+    background-image: url("images/left_arrow.png");
 }
 .iphone.vertical .bigbutton   { left:170px; bottom:42px; }
 .iphone.horizontal .bigbutton { right:58px; top:160px;   }

@@ -6,7 +6,8 @@ function vote(videoId,vote){
 	    //alert(data);
 	    document.getElementById('down').onclick="return false;";
 	    document.getElementById('up').onclick="return false;";
-	    //document.getElementById('stat').style.display='block';		    
+	    //document.getElementById('stat').style.display='block';	
+	    document.getElementById('rating').innerHTML=data
 	  }
 	});
 }

@@ -40,4 +40,6 @@
 			});	
     });
     </script>
+    
+    <script src='swipe.js'></script>
 </head>
