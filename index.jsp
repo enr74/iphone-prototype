@@ -46,7 +46,6 @@ if (session.getAttribute("videos")==null){
 	session.setAttribute("videos",map);
 }
 %>
-
 <body>
     <div class="iphone horizontal">
         <div class="phone">
@@ -54,7 +53,7 @@ if (session.getAttribute("videos")==null){
             <div class="topbar"></div>
             <div class="screen">
                 <div class="app upackinglist">
-                    <a href="welcome.jsp" title="uPackingList" class="external">30Seconds</a>
+                    <a href="welcome.jsp" title="uPackingList" class="external" onmouseover="display'message')">30Seconds</a>
                 </div>
                 <div class="dock">
                     <div class="app upackinglist">

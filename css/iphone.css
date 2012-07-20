@@ -378,6 +378,15 @@
     bottom:130px;
 }
 
+.iphone .playbutton {
+    right:210px;
+    position:absolute;
+    display:block;
+    width:64px;
+    height:64px;
+    text-indent:-99999px;
+}
+
 .iphone .rightbutton {
     right:25px;
     position:absolute;
