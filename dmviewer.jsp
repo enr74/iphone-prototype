@@ -4,14 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ include file="header.jsp" %>
 <%
-String videoId = request.getParameter("videoId");
-Object title = videoId;
+String videoId1 = request.getParameter("videoId1");
+String videoId2 = request.getParameter("videoId2");
+String previousVideo = request.getParameter("previousVideo");
+Object title = videoId1;
 Object mp4 = null;
 Object webm = null;
 Object rating = null;
 try {
 	Map map = (Map)session.getAttribute("videos");
-	Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
+	Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId1);
     title = videoProperties.get("title");
     rating = videoProperties.get("rating");
     mp4 = videoProperties.get("mp4");
@@ -36,10 +38,11 @@ try {
 				</div>
                 <div align="center" width="100%" class="icons" >
                     <table><tr>
-                    <td><a href='stats.jsp' class="icon iicon" title="charts"><em class="ii-chartbar"></em></a></td>
-                    <td><a href="welcome.jsp" class="icon iicon"><em class="ii-movie2" title="Home"></em></a></td>
-                    <td><a href="welcome.jsp" class="icon iicon"><em class="ii-bird" title="Share"></em></a></td>
-                    <td><a href="welcome.jsp" class="icon iicon"><em class="ii-paperclip" title="Bookmark"></em></a></td>
+                    <%if(previousVideo==null){ %>
+                    <td><a href="#" onclick="location.href='dmviewer.jsp?videoId1=<%=videoId2 %>&previousVideo=<%=videoId1 %>'" class="icon iicon"><em class="ii-eye" title="Next"></em></a></td>
+                    <%} else { %>
+                    <td><a href="#" onclick="location.href='votedeathmatch.jsp?videoId1=<%=previousVideo %>&videoId2=<%=videoId1 %>'" class="icon iicon"><em class="ii-target" title="Next"></em></a></td>
+                    <%} %>
                     </tr></table>
                 </div>  
             </div>

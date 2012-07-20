@@ -8,7 +8,7 @@
         <div class="phone">
     	<div class="display">
             <div class="screen">
-                <div id='slider3' class='swipe' align="center" height="140" style="padding-top: 10px;padding-bottom: 10px">
+                <div id='slider3' class='swipe' align="center" height="140" style="padding-top: 0px;padding-bottom: 2px">
                     <ul>
                     <%
                     Map map = (Map)session.getAttribute("videos");
@@ -27,7 +27,7 @@
                     %>
                     </ul>
 				</div>
-                <div id='slider4' class='swipe' align="center" height="140" style="padding-top: 10px;padding-bottom: 10px">
+                <div id='slider4' class='swipe' align="center" height="140" style="padding-top: 2px;padding-bottom: 0px">
 					<ul>
                     <%
                     videos = map.keySet().iterator();
@@ -37,7 +37,7 @@
                         Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
                         String image = (String)videoProperties.get("image");
                         %>
-                        <li style='display:<%=display%>'><div><img height="140" onclick="location.href='dmviewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
+                        <li style='display:<%=display%>'><div><img height="140" src="<%=image%>"/></div></li>
                         <%
                         display = "none";
                     }
@@ -45,6 +45,11 @@
                     %>
 					</ul>
 				</div>
+                <div align="center" width="100%" class="icons" >
+                    <table><tr>
+                    <td><a href="#" onclick="play()" class="icon iicon"><em class="ii-eye" title="Play"></em></a></td>
+                    </tr></table>
+                </div>  
                 <a href="#" onclick="slider3.prev();return false;" class="top leftbutton">L</a> 
                 <a href="#" onclick="slider3.next();return false;" class="top rightbutton">R</a>
                 <a href="#" onclick="slider4.prev();return false;" class="bottom leftbutton">L</a> 
@@ -55,8 +60,26 @@
         <a href="index.jsp" class="bigbutton">Exit</a>
     </div>
     <script>
+    var videos =[
+    <%
+    videos = map.keySet().iterator();
+    while(videos.hasNext()){
+        String videoId= (String) videos.next();
+        %>
+        '<%=videoId%>',
+        <%
+    }
+    
+    %>
+    'end'];
         var slider3 = new Swipe(document.getElementById('slider3'));
         var slider4 = new Swipe(document.getElementById('slider4'));
+        function play(){
+            var index = slider3.getPos();
+            var id1 = videos[slider3.getPos()];
+            var id2 = videos[slider4.getPos()];
+            location.href='dmviewer.jsp?videoId1='+id2+'&videoId2='+id2;
+        }     
     </script>
 </body>
 </html>
