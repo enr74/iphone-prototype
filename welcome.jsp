@@ -34,9 +34,9 @@
                     %>
                     </ul>
                 </div>
-                <a href="#" onclick="play()" class="middle playbutton">P</a>
-                <a href="#" onclick="slider3.prev();return false;" class="middle leftbutton">L</a> 
-                <a href="#" onclick="slider3.next();return false;" class="middle rightbutton">R</a>
+                <a href="#" id="playbutton" onclick="play()" class="middle playbutton">P</a>
+                <a href="#" id="leftbutton" onclick="slider3.prev();return false;" class="middle leftbutton">L</a> 
+                <a href="#" id="rightbutton" onclick="slider3.next();return false;" class="middle rightbutton">R</a>
             </div>
         </div>
         </div>
