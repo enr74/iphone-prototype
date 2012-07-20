@@ -180,3 +180,15 @@ h3 {
 .iphone .button.red { background-position:0 -280px }
 .iphone .button.red:active { background-position:0 -630px }
 /*/Buttons*/
+
+/* HOVER STYLES */
+.pop-up {
+  display: none;
+  position: absolute;
+  width: 280px;
+  padding: 10px;
+  background: #eeeeee;
+  color: #000000;
+  border: 1px solid #1a1a1a;
+  font-size: 50%;
+}

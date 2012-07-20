@@ -11,3 +11,25 @@ function vote(videoId,vote){
 	  }
 	});
 }
+
+$(function() {
+
+	var moveLeft = 30;
+	var moveDown = 60;
+
+	$('a').hover(function(e) {
+
+	
+    $('div#pop-up_' + this.id ).show()
+      .css('top', e.pageY + moveDown)
+      .css('left', e.pageX + moveLeft)
+      .appendTo('body');
+  }, function() {
+    $('div#pop-up_' + this.id ).hide();
+  });
+
+  $('a').mousemove(function(e) {
+    $("div#pop-up_" + this.id ).css('top',  e.pageY - moveDown).css('left', e.pageX + moveLeft);
+  });
+
+});

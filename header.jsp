@@ -43,3 +43,5 @@
     
     <script src='swipe.js'></script>
 </head>
+
+<%@ include file="popup.jsp" %>

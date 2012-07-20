@@ -34,9 +34,9 @@
                     %>
                     </ul>
                 </div>
-                <a href="#" class="middle playbutton">P</a> 
-                <a href="#" onclick="slider3.prev();return false;" class="middle leftbutton">L</a> 
-                <a href="#" onclick="slider3.next();return false;" class="middle rightbutton">R</a>
+                <a href="#" id="playbutton" class="middle playbutton">P</a> 
+                <a href="#" id="leftbutton" onclick="slider3.prev();return false;" class="middle leftbutton">L</a> 
+                <a href="#" id="rightbutton" onclick="slider3.next();return false;" class="middle rightbutton">R</a>
             </div>
         </div>
         </div>
@@ -46,5 +46,6 @@
         var slider3 = new Swipe(document.getElementById('slider3'));
         var slider4 = new Swipe(document.getElementById('slider4'));
     </script>
+
 </body>
 </html>
