@@ -40,5 +40,4 @@ $(function() {
   $('a').mousemove(function(e) {
     $("div#pop-up_" + this.id ).css('top',  e.pageY - moveDown).css('left', e.pageX + moveLeft);
   });
-
 });

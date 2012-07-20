@@ -63,5 +63,6 @@
             location.href='viewer.jsp?videoId='+id;
         }     
     </script>
+
 </body>
 </html>
