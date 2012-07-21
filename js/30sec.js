@@ -3,11 +3,20 @@ function vote(videoId,vote){
 	  url: 'vote.jsp?videoId='+videoId+'&vote=' + vote,
 	  success: function(data) {
 	    $('.result').html(data);
-	    //alert(data);
 	    document.getElementById('down').onclick="return false;";
 	    document.getElementById('up').onclick="return false;";
-	    //document.getElementById('stat').style.display='block';	
 	    document.getElementById('rating').innerHTML=data
+	  }
+	});
+}
+function voteDeathMatch(videoId,vote){
+	$.ajax({
+	  url: 'vote.jsp?videoId='+videoId+'&vote=' + vote,
+	  success: function(data) {
+	    $('.result').html(data);
+	    document.getElementById('v1').onclick="return false;";
+	    document.getElementById('v2').onclick="return false;";
+	    location.href='stats.jsp'
 	  }
 	});
 }
@@ -31,5 +40,4 @@ $(function() {
   $('a').mousemove(function(e) {
     $("div#pop-up_" + this.id ).css('top',  e.pageY - moveDown).css('left', e.pageX + moveLeft);
   });
-
 });

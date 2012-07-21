@@ -26,7 +26,7 @@
                     	Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
                     	String image = (String)videoProperties.get("image");
                     	%>
-                    	<li style='display:<%=display%>'><div><img onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
+                    	<li style='display:<%=display%>'><div><img src="<%=image%>"/></div></li>
                     	<%
                     	display = "none";
                     }
@@ -34,7 +34,7 @@
                     %>
                     </ul>
                 </div>
-                <a href="#" id="playbutton" class="middle playbutton">P</a> 
+                <a href="#" id="playbutton" onclick="play()" class="middle playbutton">P</a>
                 <a href="#" id="leftbutton" onclick="slider3.prev();return false;" class="middle leftbutton">L</a> 
                 <a href="#" id="rightbutton" onclick="slider3.next();return false;" class="middle rightbutton">R</a>
             </div>
@@ -43,8 +43,25 @@
         <a href="index.jsp" class="bigbutton">Exit</a>
     </div>
     <script>
+    var videos =[
+    <%
+    videos = map.keySet().iterator();
+    while(videos.hasNext()){
+        String videoId= (String) videos.next();
+        %>
+        '<%=videoId%>',
+        <%
+    }
+    
+    %>
+    'end'];
         var slider3 = new Swipe(document.getElementById('slider3'));
-        var slider4 = new Swipe(document.getElementById('slider4'));
+        var slider4 = new Swipe(document.getElementById('slider4'));   
+        function play(){
+            var index = slider3.getPos();
+            var id = videos[index];
+            location.href='viewer.jsp?videoId='+id;
+        }     
     </script>
 
 </body>
