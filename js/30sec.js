@@ -44,8 +44,8 @@ $(function() {
 
   	$(document).ready(function() {	
     $('div#pop-up_'+ document.body.id).show()
-      .css('top',   400)
-      .css('left',   150)
+      .css('top',   420)
+      .css('left',   360)
       .appendTo('body');
   }, function() {
     $('div#pop-up_'+ document.body.id).hide();
