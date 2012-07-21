@@ -26,9 +26,7 @@ $(function() {
 	var moveLeft = 30;
 	var moveDown = 60;
 
-	$('a').hover(function(e) {
-
-	
+	$('a').hover(function(e) {	
     $('div#pop-up_' + this.id ).show()
       .css('top', e.pageY + moveDown)
       .css('left', e.pageX + moveLeft)
@@ -40,4 +38,15 @@ $(function() {
   $('a').mousemove(function(e) {
     $("div#pop-up_" + this.id ).css('top',  e.pageY - moveDown).css('left', e.pageX + moveLeft);
   });
+
+
 });
+
+  	$(document).ready(function() {	
+    $('div#pop-up_'+ document.body.id).show()
+      .css('top',   100)
+      .css('left',   100)
+      .appendTo('body');
+  }, function() {
+    $('div#pop-up_'+ document.body.id).hide();
+  });

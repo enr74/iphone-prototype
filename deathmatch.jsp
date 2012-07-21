@@ -47,7 +47,7 @@
 				</div>
                 <div align="center" width="100%" class="icons" >
                     <table><tr>
-                    <td><a href="#" onclick="play()" class="icon iicon"><em class="ii-eye" title="Play"></em></a></td>
+                    <td><a href="#" id="deathmatch2" onclick="play()" class="icon iicon"><em class="ii-eye" title="Play"></em></a></td>
                     </tr></table>
                 </div>  
                 <a href="#" onclick="slider3.prev();return false;" class="top leftbutton">L</a> 

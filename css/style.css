@@ -190,5 +190,11 @@ h3 {
   background: #eeeeee;
   color: #000000;
   border: 1px solid #1a1a1a;
-  font-size: 50%;
+  font-size: 90%;
+}
+
+h1, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }

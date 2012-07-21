@@ -1,8 +1,25 @@
+<%
+response.setHeader("Cache-Control", "no-store, no-cache");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+%>
+<%@page import="java.util.LinkedHashMap"%>
+<%@page import="java.io.InputStream"%>
+<%@page import="java.io.FileInputStream"%>
+<%@page import="org.apache.commons.lang.StringUtils"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.TreeMap"%>
+<%@page import="java.io.File"%>
+<%@page import="java.util.Properties"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.List"%>
+
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>jQuery iPhone UI</title>
+    <title>30 Seconds Demo</title>
     <meta name="keywords" content="ajax, jquery, javascript, css, iphone, iphone interface, iphone ui" />
-    <meta name="description" content="jQuery iPhone interface for web applications" />
+    <meta name="description" content="30 Seconds Demo" />
 	
     <link rel="stylesheet" href="css/style.css" type='text/css' media='all' />
     <link rel="stylesheet" href="css/iphone.css" type='text/css' media='all' />
@@ -44,4 +61,4 @@
     <script src='swipe.js'></script>
 </head>
 
-<%@ include file="popup.jsp" %>
+<%@include file="popupload.jsp"%>

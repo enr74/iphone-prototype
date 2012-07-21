@@ -1,16 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<%@page import="java.util.LinkedHashMap"%>
-<%@page import="java.io.InputStream"%>
-<%@page import="java.io.FileInputStream"%>
-<%@page import="org.apache.commons.lang.StringUtils"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.TreeMap"%>
-<%@page import="java.io.File"%>
-<%@page import="java.util.Properties"%>
-<%@page import="java.util.Map"%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <%@ include file="header.jsp" %>
-<body>
+<body  id="welcome">
     <div class="iphone horizontal">
         <div class="phone">
     	<div class="display">
