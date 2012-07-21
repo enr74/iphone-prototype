@@ -193,6 +193,29 @@ h3 {
   font-size: 90%;
 }
 
+.pop-up_screen {
+  display: none;
+  position: absolute;
+  width: 600px;
+  height: 200px
+  padding: 10px;
+  background: #eeeeee;
+  color: #000000;
+  border: 1px solid #1a1a1a;
+  font-size: 90%;
+}
+
+.pop-up_href {
+  display: none;
+  position: absolute;
+  width: 280px;
+  padding: 10px;
+  background: #eeeeee;
+  color: #000000;
+  border: 1px solid #1a1a1a;
+  font-size: 90%;
+}
+
 h1, h3 {
   margin: 0;
   padding: 0;

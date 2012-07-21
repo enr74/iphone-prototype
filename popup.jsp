@@ -13,8 +13,9 @@ while(popupkeys.hasNext()){
     String popupId = ids[0];
     String popupTitle = ids[1];
     String popupText = ids[2];
+    String popupType = ids[3];    
 %>
-    <div class="pop-up" id="<%=popupId%>">
+    <div class="pop-up_<%=popupType%>" id="<%=popupId%>">
       <h3><%=popupTitle%></h3>
       <p><%=popupText%></p>
     </div>
