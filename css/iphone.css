@@ -93,6 +93,12 @@
     height:100%;
 }
 */
+.iphone .chartbar {
+    display:block;
+    width:100%;
+    height:20px;
+    background:#bbb url('images/topbar.png') repeat-x;
+}
 /*TopBar*/
 .iphone .topbar {
     display:block;
@@ -367,7 +373,7 @@
 
 
 .iphone .top {
-    top:42px;
+    top:85px;
 }
 
 .iphone .bottom {
@@ -378,6 +384,10 @@
     bottom:130px;
 }
 
+.iphone .inwithin {
+    bottom:102px;
+}
+
 .iphone .playbutton {
     right:210px;
     position:absolute;
@@ -386,6 +396,32 @@
     height:64px;
     text-indent:-99999px;
     background-image: url("images/play_icon.png");
+}
+
+.iphone .R25 {
+    right:100px;
+    
+}
+
+.iphone .L25 {
+    left:100px;
+    
+}
+
+.iphone .D0 {
+    bottom:5px;
+    
+}
+
+
+
+.iphone .upbutton {
+    position:absolute;
+    display:block;
+    width:64px;
+    height:64px;
+    text-indent:-99999px;
+    background-image: url("images/up_arrow.png");
 }
 
 .iphone .rightbutton {

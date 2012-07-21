@@ -39,8 +39,8 @@ try {
                     </ul>
                 </div>
             </div>
-                 <a href="#" id="v1" onclick="voteDeathMatch('<%=videoId1%>', +2)" class="D0 R25 upbutton">L</a> 
-                <a href="#" id="v2" onclick="voteDeathMatch('<%=videoId2%>', +2)" class="D0 L25 upbutton">R</a>
+                 <a href="#" id="v1" onclick="voteDeathMatch('<%=videoId1%>', '<%=videoId2%>')" class="D0 R25 upbutton">L</a> 
+                <a href="#" id="v2" onclick="voteDeathMatch('<%=videoId2%>', '<%=videoId1%>')" class="D0 L25 upbutton">R</a>
         </div>
         </div>
         <a href="index.jsp" class="bigbutton">Exit</a>

@@ -19,9 +19,15 @@ if (session.getAttribute("videos")==null){
 	        videoProperties = new LinkedHashMap<String, Object>();
 	        map.put(videoId, videoProperties);
 	    }
-	    if (property.equalsIgnoreCase("rating")){
-	        value = Integer.valueOf((String)value);
-	    }
+        if (property.equalsIgnoreCase("rating")){
+            value = Integer.valueOf((String)value);
+        }
+        if (property.equalsIgnoreCase("lost")){
+            value = Integer.valueOf((String)value);
+        }
+        if (property.equalsIgnoreCase("won")){
+            value = Integer.valueOf((String)value);
+        }
 	    videoProperties.put(property, value);
 	    videoProperties.put("id", videoId);
 	}

@@ -9,9 +9,9 @@ function vote(videoId,vote){
 	  }
 	});
 }
-function voteDeathMatch(videoId,vote){
+function voteDeathMatch(videoId1,videoId2){
 	$.ajax({
-	  url: 'vote.jsp?videoId='+videoId+'&vote=' + vote,
+	  url: 'dmvote.jsp?videoId1='+videoId1+'&videoId2=' + videoId2,
 	  success: function(data) {
 	    $('.result').html(data);
 	    document.getElementById('v1').onclick="return false;";

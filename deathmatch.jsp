@@ -75,7 +75,7 @@
             var index = slider3.getPos();
             var id1 = videos[slider3.getPos()];
             var id2 = videos[slider4.getPos()];
-            location.href='dmviewer.jsp?videoId1='+id2+'&videoId2='+id2;
+            location.href='dmviewer.jsp?videoId1='+id1+'&videoId2='+id2;
         }     
     </script>
 </body>

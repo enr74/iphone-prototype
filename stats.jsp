@@ -13,16 +13,36 @@ Set videoSet = new TreeSet(new Comparator(){
         Map video2 = (Map)o2;
         Integer rating1 = (Integer)video1.get("rating");
         Integer rating2 = (Integer)video2.get("rating");
-        if (rating1.compareTo(rating2)==0){
+        Integer won1 = (Integer)video1.get("won");
+        Integer won2 = (Integer)video2.get("won");
+        Integer lost1 = (Integer)video1.get("lost");
+        Integer lost2 = (Integer)video2.get("lost");
+        Integer score2 = new Integer(rating2.intValue() + won2.intValue() - lost2.intValue());
+        Integer score1 = new Integer(rating1.intValue() + won1.intValue() - lost1.intValue());
+        if (score1.compareTo(score2)==0){
             String id1 = (String)video1.get("id");
             String id2 = (String)video2.get("id");
             return id1.compareTo(id2);
         }
-        return rating2.compareTo(rating1);
+        return score2.compareTo(score1);
     }
 });
 videoSet.addAll(map.values());
 %>
+<script>
+var onDisplay;
+function show(id){
+    var display = document.getElementById(id).style.display;
+    if (display=='none') {
+        document.getElementById(id).style.display = 'block';
+        if(onDisplay) document.getElementById(onDisplay).style.display = 'none';
+        onDisplay = id;
+    } else {
+        document.getElementById(id).style.display = 'none';
+    }
+    
+}
+</script>
 <body>
     <div class="iphone horizontal">
         <div class="phone">
@@ -40,9 +60,12 @@ videoSet.addAll(map.values());
                         Object image = videoProperties.get("image");
                         Object rating = videoProperties.get("rating");
                         Object title = videoProperties.get("title");
+                        Object won = videoProperties.get("won");
+                        Object lost = videoProperties.get("lost");
                     %>
                     <ul>
-                        <li><img width="200" onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/><%=title %>:<b><%=rating %></b></li>
+                        <li><div class="chartbar" onclick="show('<%=videoId%>')"><%=title %>(points:<%=rating %>, matches won:<%=won %>, matches lost:<%=lost %>)</div>
+                        <div id="<%=videoId%>" style="display: none"><img height="250" onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
                     </ul>
                     <%
                     }
