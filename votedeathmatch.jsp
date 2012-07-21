@@ -27,17 +27,20 @@ try {
         <div class="phone">
     	<div class="display">
             <div class="screen">
-                <div id='slider3' class='swipe' align="center" height="140" style="padding-top: 10px;padding-bottom: 5px">
-                    <ul>
-                     <li ><div><img height="140" id="v1" src="<%=img1%>" onclick="voteDeathMatch('<%=videoId1%>', +2)"/></div></li>
-                    </ul>
-                </div>
-                <div id='slider3' class='swipe' align="center" height="140" style="padding-top: 5px;padding-bottom: 10px">
-                    <ul>
-                     <li ><div><img height="140" id="v2" src="<%=img2%>" onclick="voteDeathMatch('<%=videoId2%>', +2)"/></div></li>
+                <div class="titlebar">Death Match</div>
+                <div align="center" height="140" style="padding-top: 40px;padding-bottom: 5px">
+                    <table>
+                        <tr>
+                        <td><img height="150" id="v1" src="<%=img1%>" onclick="voteDeathMatch('<%=videoId1%>', +2)"/></td>
+                        <td><img height="150" id="v2" src="<%=img2%>" onclick="voteDeathMatch('<%=videoId2%>', +2)"/></td>
+                        </tr>
+                    
+                    </table>
                     </ul>
                 </div>
             </div>
+                 <a href="#" id="v1" onclick="voteDeathMatch('<%=videoId1%>', +2)" class="D0 R25 upbutton">L</a> 
+                <a href="#" id="v2" onclick="voteDeathMatch('<%=videoId2%>', +2)" class="D0 L25 upbutton">R</a>
         </div>
         </div>
         <a href="index.jsp" class="bigbutton">Exit</a>

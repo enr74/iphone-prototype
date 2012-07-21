@@ -39,9 +39,9 @@ try {
                 <div align="center" width="100%" class="icons" >
                     <table><tr>
                     <%if(previousVideo==null){ %>
-                    <td><a href="#" onclick="location.href='dmviewer.jsp?videoId1=<%=videoId2 %>&previousVideo=<%=videoId1 %>'" class="icon iicon"><em class="ii-eye" title="Next"></em></a></td>
+                    <td><a id="next" href="#" onclick="location.href='dmviewer.jsp?videoId1=<%=videoId2 %>&previousVideo=<%=videoId1 %>'" class="icon iicon"><em class="ii-eye" title="Next"></em></a></td>
                     <%} else { %>
-                    <td><a href="#" onclick="location.href='votedeathmatch.jsp?videoId1=<%=previousVideo %>&videoId2=<%=videoId1 %>'" class="icon iicon"><em class="ii-target" title="Next"></em></a></td>
+                    <td><a id="vote" href="#" onclick="location.href='votedeathmatch.jsp?videoId1=<%=previousVideo %>&videoId2=<%=videoId1 %>'" class="icon iicon"><em class="ii-target" title="Vote"></em></a></td>
                     <%} %>
                     </tr></table>
                 </div>  

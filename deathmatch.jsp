@@ -8,6 +8,7 @@
         <div class="phone">
     	<div class="display">
             <div class="screen">
+                <div class="titlebar">Death Match</div>
                 <div id='slider3' class='swipe' align="center" height="140" style="padding-top: 0px;padding-bottom: 2px">
                     <ul>
                     <%
@@ -19,7 +20,7 @@
                         Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
                         String image = (String)videoProperties.get("image");
                         %>
-                        <li style='display:<%=display%>'><div><img height="140" onclick="location.href='dmviewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
+                        <li style='display:<%=display%>'><div><img height="140" onclick="play()" src="<%=image%>"/></div></li>
                         <%
                         display = "none";
                     }
@@ -37,7 +38,7 @@
                         Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
                         String image = (String)videoProperties.get("image");
                         %>
-                        <li style='display:<%=display%>'><div><img height="140" src="<%=image%>"/></div></li>
+                        <li style='display:<%=display%>'><div><img onclick="play()" height="140" src="<%=image%>"/></div></li>
                         <%
                         display = "none";
                     }
@@ -45,11 +46,7 @@
                     %>
 					</ul>
 				</div>
-                <div align="center" width="100%" class="icons" >
-                    <table><tr>
-                    <td><a href="#" id="deathmatch2" onclick="play()" class="icon iicon"><em class="ii-eye" title="Play"></em></a></td>
-                    </tr></table>
-                </div>  
+				<a href="#" id="playdm" onclick="play()" class="inwithin playbutton">P</a>
                 <a href="#" onclick="slider3.prev();return false;" class="top leftbutton">L</a> 
                 <a href="#" onclick="slider3.next();return false;" class="top rightbutton">R</a>
                 <a href="#" onclick="slider4.prev();return false;" class="bottom leftbutton">L</a> 
