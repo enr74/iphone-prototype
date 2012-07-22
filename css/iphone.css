@@ -96,8 +96,8 @@
 .iphone .chartbar {
     display:block;
     width:100%;
-    height:20px;
-    background:#bbb url('images/topbar.png') repeat-x;
+    height:25px;
+    background:#000 url('images/topbar.png') repeat-x;
 }
 /*TopBar*/
 .iphone .topbar {

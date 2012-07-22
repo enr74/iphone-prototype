@@ -52,6 +52,7 @@ function show(id){
                     Stats
                 </div>
                 <div class="scroll iscroll">
+                <ul class="imenu">
                     <%
                     Iterator videos = videoSet.iterator();
                     while(videos.hasNext()){
@@ -63,13 +64,11 @@ function show(id){
                         Object won = videoProperties.get("won");
                         Object lost = videoProperties.get("lost");
                     %>
-                    <ul>
-                        <li><div class="chartbar" onclick="show('<%=videoId%>')"><%=title %>(points:<%=rating %>, matches won:<%=won %>, matches lost:<%=lost %>)</div>
-                        <div id="<%=videoId%>" style="display: none"><img height="250" onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
-                    </ul>
+                        <li><%=title %></li>
                     <%
                     }
                     %>
+                    </ul>
                 </div>
             </div>
         </div>
