@@ -28,6 +28,10 @@ if (session.getAttribute("videos")==null){
         if (property.equalsIgnoreCase("won")){
             value = Integer.valueOf((String)value);
         }
+        if (property.equalsIgnoreCase("views")){
+            value = Integer.valueOf((String)value);
+        }
+
 	    videoProperties.put(property, value);
 	    videoProperties.put("id", videoId);
 	}

@@ -66,10 +66,7 @@ function show(id){
                         Object lost = videoProperties.get("lost");
                         
                     %>
-
-                        <li> <a class="arrow" title="Label 1" href="viewer.jsp?videoId=<%=videoId%>"><%=i++%>. <%=title %></a>
-                        <div id="<%=videoId%>" style="display: none"><img height="250" onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
-                    
+                        <li> <a class="arrow"  href="video.jsp?videoId=<%=videoId%>"><%=i++%>. <%=title %></a></li>                    
                     <%
                     }
                     %>

@@ -8,7 +8,7 @@ boolean logged = user!=null;
 
 String videoId = request.getParameter("videoId");
 Object title = videoId;
-Object rating = null;
+Integer views = null;
 boolean canVote = logged;
 List<String> voted = null;
 Object mp4 = null;
@@ -17,7 +17,9 @@ try {
     Map map = (Map)session.getAttribute("videos");
     Map<String, Object> videoProperties = (Map<String, Object>)map.get(videoId);
     title = videoProperties.get("title");
-    rating = videoProperties.get("rating");
+    views = (Integer)videoProperties.get("views");
+    views++;
+    videoProperties.put("views",views);
     mp4 = videoProperties.get("mp4");
     webm = videoProperties.get("webm");
     if (logged){

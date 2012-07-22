@@ -14,27 +14,41 @@ Object rating = video.get("rating");
 Object won = video.get("won");
 Object lost = video.get("lost");
 Object image = video.get("image");
+Object views = video.get("views");
 %>
 <body>
     <div class="iphone horizontal">
         <div class="phone">
         <div class="display">
-              <div class="titlebar">
-                 <%=title %>
-             </div>
+
             <div class="screen">
+                <div class="titlebar">&nbsp;<%=title %>&nbsp;</div>
                 <div class="scroll iscroll">
-                    <ul class="imenu">
-                        <li><%=rating %></li>
-                        <li><%=won %></li>
-                        <li><%=lost %></li>
-                    </ul>
+                    <table>
+                        <tr>
+                            <td>
+                            <ul class="imenu">                      
+                                <li style="height: 180px;"><a href="viewer.jsp?videoId=<%=videoId%>"><img style="padding: 11px" width=240 src="<%=image %>"/></a>                            
+                                </li>
+                             </ul>
+                            </td>
+                            <td>
+                                <ul class="imenu">
+                                    <li>Score: <%=rating %></li>
+                                    <li>Matches won: <%=won %></li>
+                                    <li>Matches lost: <%=lost %></li>
+                                    <li>Views: <%=views %></li>                        
+                                </ul>
+                            </td>
+                    </tr>
+                    </table>
+
+                     
                 </div>
-                <div >
-                <img src="<%=image %>"/>
-                </div>
+
             </div>
         </div>
+        
         </div>
         <a href="index.jsp" class="bigbutton">Exit</a>
     </div>
