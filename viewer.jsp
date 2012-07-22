@@ -26,7 +26,8 @@ try {
     }
     
 } catch (Exception e){
-    e.printStackTrace(response.getWriter());
+    response.sendRedirect("index.jsp");
+    //e.printStackTrace(response.getWriter());
 }
 %>
 <body id="viewer">
@@ -34,7 +35,7 @@ try {
         <div class="phone">
         <div class="display">
             <div class="screen">
-                <div class="titlebar">&nbsp;<%=title %>&nbsp;<span id="rating"><%=rating %></span></div>
+                <div class="titlebar">&nbsp;<%=title %>&nbsp;</div>
                 <div>                               
                     <video id=home_video class="video-js vjs-default-skin" controls preload=none width=480 height="200" autoplay>
                       <source src="<%=mp4 %>" type='video/mp4'/>
@@ -57,7 +58,7 @@ try {
                     <table><tr>
                     <td><a id="likenot" href="#" onclick="<%=voteDn %>" id="down" class="icon iicon" title="like not"><em class="ii-skull2"></em></a></td>
                     <td><a id="charts" href='#' onclick="location.href='stats.jsp'" class="icon iicon" title="charts"><em class="ii-chartbar"></em></a></td>
-                    <td><a id="deathmatch" onclick="location.href='deathmatch.jsp'"  class="icon iicon" title="Death Match"><em class="ii-skull"></em></a></td>
+                    <td><a id="deathmatch" href="deathmatch.jsp"  class="icon iicon" title="Death Match"><em class="ii-skull"></em></a></td>
                     <td><a id="home" href="welcome.jsp" class="icon iicon"><em class="ii-movie2" title="Home"></em></a></td>
                     <td><a id="share" href="welcome.jsp" class="icon iicon"><em class="ii-bird" title="Share"></em></a></td>
                     <td><a id="bookmark" href="welcome.jsp" class="icon iicon"><em class="ii-paperclip" title="Bookmark"></em></a></td>
