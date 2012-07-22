@@ -61,4 +61,5 @@ response.setDateHeader("Expires", 0);
     <script src='swipe.js'></script>
 </head>
 
+<%@include file="videoload.jsp"%>
 <%@include file="popupload.jsp"%>

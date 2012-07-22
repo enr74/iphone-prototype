@@ -10,10 +10,6 @@ if (user!=null){
 }
 %>
 
-<%@include file="videoload.jsp"%>
-
-
-
 <body id="index">
     <div class="iphone horizontal">
         <div class="phone">

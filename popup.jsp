@@ -7,8 +7,6 @@ response.setDateHeader("Expires", 0);
 Iterator popupkeys = configProp.keySet().iterator();
 while(popupkeys.hasNext()){
     String key = (String)popupkeys.next();
-    System.out.println(key);
-    System.out.println(configProp.getProperty(key));    
     String[] ids = StringUtils.split(configProp.getProperty(key), "$");
     String popupId = ids[0];
     String popupTitle = ids[1];
