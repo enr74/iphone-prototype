@@ -34,7 +34,7 @@ try {
         <div class="phone">
         <div class="display">
             <div class="screen">
-                <div class="titlebar">&nbsp;<%=title %>&nbsp;<span id="rating"><%=rating %></span></div>
+                <div class="titlebar">&nbsp;<%=title %>&nbsp;</div>
                 <div>                               
                     <video id=home_video class="video-js vjs-default-skin" controls preload=none width=480 height="200" autoplay>
                       <source src="<%=mp4 %>" type='video/mp4'/>

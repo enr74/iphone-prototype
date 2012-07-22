@@ -49,12 +49,14 @@ function show(id){
         <div class="display">
             <div class="screen">
                 <div class="titlebar">
-                    Stats
+                    Charts
                 </div>
                 <div class="scroll iscroll">
+                    <ul class="imenu">
                     <%
+                    int i = 1;
                     Iterator videos = videoSet.iterator();
-                    while(videos.hasNext()){
+                    while(videos.hasNext()){                        
                         Map videoProperties = (Map)videos.next();
                         Object videoId = videoProperties.get("id");
                         Object image = videoProperties.get("image");
@@ -62,14 +64,16 @@ function show(id){
                         Object title = videoProperties.get("title");
                         Object won = videoProperties.get("won");
                         Object lost = videoProperties.get("lost");
+                        
                     %>
-                    <ul>
-                        <li><div class="chartbar" onclick="show('<%=videoId%>')"><%=title %>(points:<%=rating %>, matches won:<%=won %>, matches lost:<%=lost %>)</div>
+
+                        <li> <a class="arrow" title="Label 1" href="viewer.jsp?videoId=<%=videoId%>"><%=i++%>. <%=title %></a>
                         <div id="<%=videoId%>" style="display: none"><img height="250" onclick="location.href='viewer.jsp?videoId=<%=videoId%>'" src="<%=image%>"/></div></li>
-                    </ul>
+                    
                     <%
                     }
                     %>
+                    </ul>
                 </div>
             </div>
         </div>
